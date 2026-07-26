@@ -1,5 +1,5 @@
 const REFRESH_MS = 60_000;
-const MTA_FEED_URL = "https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fsubway-alerts.json";
+const MTA_FEED_URL = "https://mtadisplay.mr-dfordbreezy.workers.dev/status";
 const PARAMS = new URLSearchParams(window.location.search);
 const API_URL = PARAMS.get("api") || window.MTA_STATUS_API || MTA_FEED_URL;
 const WATCHED_LINES = ["2", "3"];
