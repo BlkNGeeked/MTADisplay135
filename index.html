@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>MTA Subway View</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="dashboard" aria-live="polite">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">MTA Subway Monitor</p>
+          <h1>MTA Subway View</h1>
+        </div>
+        <div class="updated" id="lastUpdated">Updated: --:--</div>
+      </header>
+
+      <section class="line-grid" aria-label="2 and 3 train status">
+        <article class="line-card good" data-line="2">
+          <div class="train-badge">2</div>
+          <div>
+            <h2>2 Train</h2>
+            <p class="line-status">Good Service</p>
+          </div>
+        </article>
+        <article class="line-card good" data-line="3">
+          <div class="train-badge">3</div>
+          <div>
+            <h2>3 Train</h2>
+            <p class="line-status">Good Service</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="alerts-panel" aria-label="Active alerts">
+        <div class="panel-heading">
+          <h2>2 / 3 Train Alerts</h2>
+          <span id="alertCount">0</span>
+        </div>
+        <div class="error-banner" id="errorBanner" hidden>⚠ Unable to retrieve MTA status</div>
+        <div class="alerts-list" id="alertsList">
+          <p class="empty-state">No active alerts for the 2 or 3 train.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
